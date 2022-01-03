@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 0.0.1+1
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
-  flutter: ">=2.5.0 < 3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
+  flutter: ">=2.8.0 < 3.0.0"
 
 dependencies:
   flutter:
@@ -13,6 +13,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl:
+  gap:
+  material_design_icons_flutter:
+  flutter_svg:
+  url_launcher:
+  flex_color_scheme:
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +28,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/logos/
+    - assets/profile/
 
 arb_generator:
   input_filepath: "assets_dev/loca/loca.csv"

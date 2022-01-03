@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/localizations.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/about.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/contact.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/footer.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/profile.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/services.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/stories.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/summary.dart';
+import 'package:flutterexpertdev_github_io/widgets/home_screen/content/toolbar.dart';
+import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -15,33 +23,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.only(top: 4, left: 8, right: 8),
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
-                onPressed: onThemeToggled,
-                icon: Icon(
-                  MediaQuery.of(context).platformBrightness == Brightness.light ? Icons.dark_mode : Icons.light_mode,
-                ),
-              ),
-              const SizedBox(width: 16),
-              IconButton(
-                onPressed: onLanguageToggled,
-                icon: Text(
-                  AppLocalizations.of(context)!.localeName.toUpperCase(),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
+          Toolbar(
+            onThemeToggled: onThemeToggled,
+            onLanguageToggled: onLanguageToggled,
           ),
-          Center(
-            child: Text(AppLocalizations.of(context)!.test),
-          ),
+          const Gap(64),
+          const Profile(),
+          const Gap(64),
+          const Services(),
+          const Gap(64),
+          const About(),
+          const Gap(32),
+          const Summary(),
+          const Gap(80),
+          const Stories(),
+          const Gap(80),
+          const Contact(),
+          const Gap(96),
+          const Footer(),
         ],
       ),
     );

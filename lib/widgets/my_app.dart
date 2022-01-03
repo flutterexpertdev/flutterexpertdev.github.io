@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -26,8 +27,12 @@ class _MyAppState extends State<MyApp> {
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       locale: _locale,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: FlexThemeData.light(
+        scheme: FlexScheme.indigo,
+      ),
+      darkTheme: FlexThemeData.dark(
+        scheme: FlexScheme.deepBlue,
+      ),
       themeMode: _themeMode,
       builder: (context, child) => HomeScreen(
         onThemeToggled: () => setState(() {
