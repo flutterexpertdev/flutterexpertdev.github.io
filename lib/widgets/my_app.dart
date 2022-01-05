@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
       ),
       themeMode: _themeMode,
       builder: (context, child) => HomeScreen(
+        brightness: _themeMode.effectiveBrightness(context),
         onThemeToggled: () => setState(() {
           if (_themeMode == ThemeMode.system) {
             if (MediaQuery.of(context).platformBrightness == Brightness.light) {
@@ -52,5 +53,18 @@ class _MyAppState extends State<MyApp> {
         }),
       ),
     );
+  }
+}
+
+extension on ThemeMode {
+  Brightness effectiveBrightness(BuildContext context) {
+    switch (this) {
+      case ThemeMode.light:
+        return Brightness.light;
+      case ThemeMode.dark:
+        return Brightness.dark;
+      case ThemeMode.system:
+        return MediaQuery.of(context).platformBrightness;
+    }
   }
 }
