@@ -7,13 +7,13 @@ import 'package:url_launcher/link.dart';
 
 class Toolbar extends StatelessWidget {
   const Toolbar({
-    Key? key,
+    required this.brightness,
     required this.onThemeToggled,
-    required this.onLanguageToggled,
+    Key? key,
   }) : super(key: key);
 
+  final Brightness brightness;
   final VoidCallback onThemeToggled;
-  final VoidCallback onLanguageToggled;
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +24,10 @@ class Toolbar extends StatelessWidget {
         const _HireMeButton(),
         const Gap(32),
         AnimatedIconButton(
-          icon: MediaQuery.of(context).platformBrightness == Brightness.light ? Icons.dark_mode : Icons.light_mode,
+          icon: brightness == Brightness.dark ? Icons.light_mode : Icons.dark_mode,
           onPressed: onThemeToggled,
         ),
         const Gap(16),
-        // IconButton(
-        //   onPressed: onLanguageToggled,
-        //   icon: Text(
-        //     AppLocalizations.of(context)!.localeName.toUpperCase(),
-        //     style: const TextStyle(
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }

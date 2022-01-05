@@ -11,13 +11,13 @@ import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
+    required this.brightness,
     required this.onThemeToggled,
-    required this.onLanguageToggled,
     Key? key,
   }) : super(key: key);
 
+  final Brightness brightness;
   final VoidCallback onThemeToggled;
-  final VoidCallback onLanguageToggled;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.only(top: 4, left: 8, right: 8),
         children: [
           Toolbar(
+            brightness: brightness,
             onThemeToggled: onThemeToggled,
-            onLanguageToggled: onLanguageToggled,
           ),
           const Gap(64),
           const Profile(),
