@@ -9,13 +9,11 @@ class Toolbar extends StatelessWidget {
   const Toolbar({
     required this.brightness,
     required this.onThemeToggled,
-    required this.onLanguageToggled,
     Key? key,
   }) : super(key: key);
 
   final Brightness brightness;
   final VoidCallback onThemeToggled;
-  final VoidCallback onLanguageToggled;
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +28,6 @@ class Toolbar extends StatelessWidget {
           onPressed: onThemeToggled,
         ),
         const Gap(16),
-        // IconButton(
-        //   onPressed: onLanguageToggled,
-        //   icon: Text(
-        //     AppLocalizations.of(context)!.localeName.toUpperCase(),
-        //     style: const TextStyle(
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }

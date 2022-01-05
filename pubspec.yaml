@@ -10,8 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
   intl:
   gap:
   material_design_icons_flutter:
@@ -23,20 +21,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints:
-  arb_generator:
 
 flutter:
   uses-material-design: true
-  generate: true
   assets:
     - assets/logos/
     - assets/profile/
-
-arb_generator:
-  input_filepath: "assets_dev/loca/loca.csv"
-  output_directory: "assets_dev/l10n"
-  filename_prepend: "l10n_"
-  csv_settings:
-    delimiter: ";"
-    description_index: 1
-    base_index: 2

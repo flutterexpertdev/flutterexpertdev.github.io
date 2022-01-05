@@ -17,9 +17,6 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
-        # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
       - run: flutter pub get
       - name: Build + Commit
         run: |
