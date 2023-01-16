@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutterexpertdev_github_io/configs/asset_paths.dart';
 import 'package:flutterexpertdev_github_io/configs/content.dart';
+import 'package:flutterexpertdev_github_io/widgets/common/basic_text_button.dart';
 import 'package:gap/gap.dart';
 
 class Footer extends StatelessWidget {
@@ -47,14 +48,10 @@ class Footer extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  Content.impressum,
-                  style: textStyle,
-                ),
-                const Gap(16),
-                Text(
-                  Content.datenschutz,
-                  style: textStyle,
+                BasicTextButton(
+                  text: Content.impressum,
+                  textStyle: textStyle,
+                  url: Content.impressumUrl,
                 ),
               ],
             ),

@@ -15,11 +15,11 @@ class Contact extends StatelessWidget {
       content: Column(
         children: [
           GradientText(
-            'Available from April 2022',
+            'Available now',
             gradient: LinearGradient(
               colors: [
-                Theme.of(context).colorScheme.primaryVariant,
-                Theme.of(context).colorScheme.secondaryVariant,
+                Theme.of(context).colorScheme.primary,
+                Theme.of(context).colorScheme.secondary,
               ],
             ),
             textStyle: const TextStyle(

@@ -11,11 +11,11 @@ class Content {
   static const services = [
     ServiceModel(
       icon: Icons.phone_android_outlined,
-      text: 'App development for mobile and desktop',
+      text: 'App development for mobile, desktop & web',
     ),
     ServiceModel(
       icon: Icons.emoji_emotions_outlined,
-      text: 'Support from concept to launch & beyond',
+      text: 'Support from concept\nto launch & beyond',
     ),
     ServiceModel(
       icon: MdiIcons.handshakeOutline,
@@ -48,6 +48,10 @@ class Content {
     'Development of a mobile BubbleShooter game awarded best of by Google Play',
     'Development of a white label B2B app which later pivoted to the B2C market',
     'Development of an innovative macOS productivity app from prototype to beta',
+    'Optimization of a marketing website for an investment platform',
+    'Development of a health-tech sdk to generate analyses from hardware devices',
+    'Development of numerous features for Germany\'s highest-profile fitness apps',
+    'Consultation & development on apps for largest health insurance company in 🇩🇪'
   ];
 
   static const headerContact = "Let's work together 🙌";
@@ -75,9 +79,9 @@ class Content {
   static const footer = 'Made with \u2764  in Berlin using ';
 
   static const impressum = 'Impressum';
-  static const datenschutz = 'Datenschutz';
+  static const impressumUrl = 'https://github.com/jamesflutterdev/jamesflutterdev.github.io/blob/main/impressum.md';
 
-  static const copyright = '© 2022 James Leahy';
+  static const copyright = '© 2023 James Leahy';
 }
 
 class ServiceModel {
