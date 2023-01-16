@@ -8,7 +8,7 @@ jobs:
     name: Build + Publish Web
     env:
       USER_EMAIL: james@flutterexpert.dev
-      USER_NAME: "James"
+      USER_NAME: "James Leahy"
       GH_USERNAME: flutterexpertdev
       REPO_NAME: flutterexpertdev.github.io
     runs-on: ubuntu-latest

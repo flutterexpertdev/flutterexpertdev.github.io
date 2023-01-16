@@ -88,7 +88,7 @@ class _ServiceCardState extends State<_ServiceCard> {
           duration: AnimationConstants.ms250,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
           decoration: BoxDecoration(
-            color: _isHovering ? Theme.of(context).colorScheme.primaryVariant : Theme.of(context).colorScheme.primary,
+            color: _isHovering ? Theme.of(context).primaryColorDark : Theme.of(context).primaryColor,
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
             ),

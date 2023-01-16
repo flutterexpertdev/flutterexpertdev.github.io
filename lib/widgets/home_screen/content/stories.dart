@@ -41,7 +41,7 @@ class _Story extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [
             Theme.of(context).colorScheme.secondary,
-            Theme.of(context).colorScheme.secondaryVariant,
+            Theme.of(context).colorScheme.secondary.withOpacity(0.75),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
@@ -50,7 +50,7 @@ class _Story extends StatelessWidget {
         children: [
           Text(
             text,
-            textAlign: TextAlign.justify,
+            textAlign: TextAlign.left,
             style: const TextStyle(
               color: Colors.white,
             ),

@@ -1,11 +1,11 @@
 {
-    "name": "flutterexpert.dev",
-    "short_name": "flutterexpert.dev",
+    "name": "James Leahy Flutter Expert",
+    "short_name": "James Leahy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "The website of flutterexpert.dev",
+    "description": "James Leahy is a freelance Flutter Expert.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

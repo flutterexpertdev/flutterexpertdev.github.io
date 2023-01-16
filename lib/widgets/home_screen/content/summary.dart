@@ -14,7 +14,7 @@ class Summary extends StatelessWidget {
         children: const [
           _SummaryPoint(
             icon: Icons.work,
-            title: '12',
+            title: '12+',
             subtitle: 'Years',
           ),
           _SummaryPoint(
